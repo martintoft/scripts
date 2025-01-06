@@ -21,7 +21,7 @@
 # depending on transfer method), transfer them to the phone via e.g. MTP, and
 # untar them using e.g. the RAR app by RARLAB.
 
-last_sunday() {
+last_sunday_in_31_day_month() {
   year=$1 # yyyy
   month=$2 # mm
   day=31
@@ -38,8 +38,8 @@ last_sunday() {
 time_zone() {
   timestamp=$1 # yyyymmddHHMMSS
   year=$(echo $timestamp | egrep -o '^.{4}')
-  winter_time_end=$(last_sunday $year 03)020000
-  winter_time_start=$(last_sunday $year 10)020000 # As good as it can be.
+  winter_time_end=$(last_sunday_in_31_day_month $year 03)020000
+  winter_time_start=$(last_sunday_in_31_day_month $year 10)020000 # As good as it can be.
   if [ $timestamp -lt $winter_time_end -o $timestamp -ge $winter_time_start ]; then
     echo 'CET'
   else
