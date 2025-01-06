@@ -3,9 +3,11 @@
 # Written by Martin Toft Bay <mt@martintoft.dk> on 2025-01-06.
 #
 # Set mtime based on timestamp in file name for a picture taken on a phone
-# using CEST/CET time zones. Beware that all files in the current directory,
-# without recursion into sub-directories, are processed. Read the script before
-# use. It works on Ubuntu 24.04.
+# using CEST/CET time zones. It is assumed the time zone switch happens at
+# 02:00 local time on the last Sunday in March and October. This is the case in
+# e.g. Denmark. Beware that all files in the current directory, without
+# recursion into sub-directories, are processed. Read the script before use. It
+# works on Ubuntu 24.04.
 #
 # Demo:
 #
